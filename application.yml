@@ -1,0 +1,30 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/botConnector
+  driverClassName: org.postgresql.Driver
+  username: postgres
+  password: postgres
+
+rabbitconfig:
+  hostname: localhost
+  username: guest
+  password: guest
+  exchange: rmq.internal.exchange
+  topics: rmq.internal.nlpresponse
+  nlpsenderroutingkey: nlp.request.key
+  nlpreceiverroutingkey: nlp.response.key
+
+---
+spring:
+   profiles: test
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/botConnector
+  driverClassName: org.postgresql.Driver
+  username: botconnector
+  password: botconnector

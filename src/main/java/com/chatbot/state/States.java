@@ -1,0 +1,13 @@
+package com.chatbot.state;
+
+public enum States {
+
+    PRIMITIVE,
+    MULTIPLE_INTENTS_IDENTIFIED,
+    INTENT_IDENTIFIED,
+    PARAMETERS_FULFILLED,
+    ACTION_SUCCESS,
+    ACTION_FAILED,
+    COMPLETE;
+
+}
